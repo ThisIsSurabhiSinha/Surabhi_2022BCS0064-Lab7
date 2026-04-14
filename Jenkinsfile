@@ -18,6 +18,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 sh "docker rm -f $CONTAINER_NAME || true"
+                sh "docker ps -q | xargs -r docker rm -f || true"
                 sh "docker run -d -p $PORT:8000 --name $CONTAINER_NAME $IMAGE_NAME"
             }
         }
