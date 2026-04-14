@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "2022bcs0064/2022bcs0064_surabhi_lab8:latest"
+        IMAGE_NAME = "2022bcs0064/2022bcs0064_surabhi_lab7:latest"
         CONTAINER_NAME = "ml_test_container"
         PORT = "8000"
     }
